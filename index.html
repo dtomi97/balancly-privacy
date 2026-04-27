@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balancly – Privacy Policy</title>
+  <title>Balancly – Privacy Policy / Adatvédelmi irányelvek</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -21,6 +21,21 @@
       padding: 40px 40px 48px;
       box-shadow: 0 2px 16px rgba(0,0,0,0.07);
     }
+    .lang-switcher { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn {
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 2px solid #4caf50;
+      background: transparent;
+      color: #4caf50;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .lang-btn.active { background: #4caf50; color: #fff; }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
     h1 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 6px; }
     .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 40px; }
     h2 {
@@ -34,198 +49,293 @@
     li { margin-bottom: 6px; }
     a { color: #2e7d32; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .section-divider {
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 20px 0;
-    }
+    .section-divider { border: none; border-top: 1px solid #eee; margin: 20px 0; }
     @media (max-width: 600px) {
       .container { padding: 24px 20px 36px; border-radius: 0; }
     }
   </style>
 </head>
-  <body>
-    <div class="container">
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">Balancly – Finance Manager &nbsp;·&nbsp; Last updated: April 2026</p>
+<body>
+<div class="container">
 
-      <p>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('hu')">Magyar</button>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="content-en" class="lang-content active">
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Balancly – Finance Manager  ·  Last updated: April 2026</p>
+<p>
         This Privacy Policy explains how Balancly ("we", "our", or "the app") collects, uses, and protects information
         when you use our mobile application. By using Balancly, you agree to the practices described in this policy.
       </p>
-
-      <h2>1. Data We Collect</h2>
-      <p>We collect only the minimum data necessary to provide the app's features:</p>
-      <ul>
-        <li>
-          <strong>Account information</strong> Your email address, used to create and identify your account via Firebase
+<h2>1. Data We Collect</h2>
+<p>We collect only the minimum data necessary to provide the app's features:</p>
+<ul>
+<li>
+<strong>Account information</strong> Your email address, used to create and identify your account via Firebase
           Authentication.
         </li>
-        <li>
-          <strong>Financial data:</strong> Expense and income transactions, categories, category limits, and recurring
+<li>
+<strong>Financial data:</strong> Expense and income transactions, categories, category limits, and recurring
           expenses that you manually enter.
         </li>
-        <li>
-          <strong>Preferences:</strong> Selected language, currency, date format, avatar, and notification settings —
+<li>
+<strong>Preferences:</strong> Selected language, currency, date format, avatar, and notification settings —
           stored locally and in the cloud.
         </li>
-        <li>
-          <strong>Subscription data:</strong> Purchase history, subscription status, and entitlements — managed by
+<li>
+<strong>Subscription data:</strong> Purchase history, subscription status, and entitlements — managed by
           RevenueCat.
         </li>
-        <li>
-          <strong>Device identifiers:</strong> An anonymous device ID used by Google AdMob for ad personalisation (free
+<li>
+<strong>Device identifiers:</strong> An anonymous device ID used by Google AdMob for ad personalisation (free
           tier only).
         </li>
-      </ul>
-      <p>
+</ul>
+<p>
         We do <strong>not</strong> collect your bank details, payment card numbers, or any financial account
         credentials.
       </p>
-
-      <!-- ── 2. How We Use Your Data ── -->
-      <h2>2. How We Use Your Data</h2>
-      <ul>
-        <li>To provide and sync your financial data across devices.</li>
-        <li>To manage your premium subscription and unlock premium features.</li>
-        <li>To display relevant advertisements to free-tier users via Google AdMob.</li>
-        <li>To send optional local notifications (daily reminders, monthly recap).</li>
-      </ul>
-
-      <!-- ── 3. Firebase (Google) ── -->
-      <h2>3. Firebase — Authentication & Cloud Storage</h2>
-      <p>
+<!-- ── 2. How We Use Your Data ── -->
+<h2>2. How We Use Your Data</h2>
+<ul>
+<li>To provide and sync your financial data across devices.</li>
+<li>To manage your premium subscription and unlock premium features.</li>
+<li>To display relevant advertisements to free-tier users via Google AdMob.</li>
+<li>To send optional local notifications (daily reminders, monthly recap).</li>
+</ul>
+<!-- ── 3. Firebase (Google) ── -->
+<h2>3. Firebase — Authentication &amp; Cloud Storage</h2>
+<p>
         Balancly uses <strong>Firebase</strong> (by Google) for user authentication and data storage. Your account
         information and transaction data are stored securely in Firebase Firestore.
       </p>
-      <ul>
-        <li>Firebase Auth handles sign-in via email/password.</li>
-        <li>Firestore stores your transactions, categories, limits, and preferences.</li>
-        <li>Data is stored in Google's secure cloud infrastructure.</li>
-      </ul>
-      <p>
+<ul>
+<li>Firebase Auth handles sign-in via email/password.</li>
+<li>Firestore stores your transactions, categories, limits, and preferences.</li>
+<li>Data is stored in Google's secure cloud infrastructure.</li>
+</ul>
+<p>
         Firebase privacy policy:
         <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a>
-      </p>
-
-      <!-- ── 4. RevenueCat ── -->
-      <h2>4. RevenueCat — Subscription Management</h2>
-      <p>
+</p>
+<!-- ── 4. RevenueCat ── -->
+<h2>4. RevenueCat — Subscription Management</h2>
+<p>
         Balancly uses <strong>RevenueCat</strong> to manage in-app subscriptions and validate purchases. When you
         subscribe, RevenueCat processes and stores:
       </p>
-      <ul>
-        <li>An anonymous user identifier (no personal data unless you are logged in).</li>
-        <li>Purchase receipts and subscription status from Google Play.</li>
-        <li>Entitlement status (whether your premium subscription is active).</li>
-        <li>Subscription expiry dates and renewal history.</li>
-      </ul>
-      <p>
+<ul>
+<li>An anonymous user identifier (no personal data unless you are logged in).</li>
+<li>Purchase receipts and subscription status from Google Play.</li>
+<li>Entitlement status (whether your premium subscription is active).</li>
+<li>Subscription expiry dates and renewal history.</li>
+</ul>
+<p>
         RevenueCat does not receive your payment card details — these remain with Google Play. RevenueCat only receives
         anonymised purchase tokens from the store.
       </p>
-      <p>
+<p>
         RevenueCat privacy policy:
         <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>
-      </p>
-
-      <!-- ── 5. Google AdMob ── -->
-      <h2>5. Google AdMob — Advertising</h2>
-      <p>
+</p>
+<!-- ── 5. Google AdMob ── -->
+<h2>5. Google AdMob — Advertising</h2>
+<p>
         Free-tier users may see interstitial advertisements delivered by <strong>Google AdMob</strong>. AdMob may
         collect and use:
       </p>
-      <ul>
-        <li>Advertising identifiers (Google Advertising ID on Android).</li>
-        <li>Device information (model, OS version, language, time zone).</li>
-        <li>App usage data for ad frequency and relevance.</li>
-        <li>
+<ul>
+<li>Advertising identifiers (Google Advertising ID on Android).</li>
+<li>Device information (model, OS version, language, time zone).</li>
+<li>App usage data for ad frequency and relevance.</li>
+<li>
           Approximate location (country/region level) derived from your IP address — <strong>not</strong> GPS or precise
           location. We do not request location permissions.
         </li>
-      </ul>
-      <p>
+</ul>
+<p>
         Premium subscribers do not see any advertisements. You can reset or opt out of ad personalisation in your device
         settings under <em>Privacy → Ads</em>.
       </p>
-      <p>
+<p>
         Google AdMob privacy policy:
         <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-      </p>
-
-      <!-- ── 6. Data Export & Import ── -->
-      <h2>6. Data Export & Import</h2>
-      <p>
+</p>
+<!-- ── 6. Data Export & Import ── -->
+<h2>6. Data Export &amp; Import</h2>
+<p>
         Balancly allows you to <strong>export your transaction data</strong> as a CSV file and share it via the system
         share sheet. Exported files contain your transactions (type, date, name, amount, category) and are generated
         locally on your device. We do not upload or store your exported files on any server.
       </p>
-      <p>
+<p>
         You may also <strong>import CSV files</strong> to add transactions in bulk. Imported data is validated locally
         and written to your Firestore account. Imported files are not stored by us after processing.
       </p>
-
-      <!-- ── 7. Local Notifications ── -->
-      <h2>7. Local Notifications</h2>
-      <p>
+<!-- ── 7. Local Notifications ── -->
+<h2>7. Local Notifications</h2>
+<p>
         Balancly can send optional local notifications: a daily expense reminder and a monthly recap notification. These
         are scheduled locally on your device and do not involve any external server. No notification content is
         transmitted to us.
       </p>
-
-      <!-- ── 8. Data Retention ── -->
-      <h2>8. Data Retention</h2>
-      <p>
+<!-- ── 8. Data Retention ── -->
+<h2>8. Data Retention</h2>
+<p>
         Your data is retained as long as your account exists. When you delete your account, all Firestore data
         (transactions, categories, preferences) is permanently deleted. RevenueCat customer data is also deleted upon
         account deletion in compliance with GDPR erasure requests. Backup copies may persist in Firebase's
         infrastructure for up to 30 days before being fully removed.
       </p>
-
-      <!-- ── 9. Your Rights (GDPR) ── -->
-      <h2>9. Your Rights</h2>
-      <p>If you are in the European Economic Area (EEA), you have the following rights:</p>
-      <ul>
-        <li><strong>Access:</strong> Request a copy of your data.</li>
-        <li><strong>Rectification:</strong> Correct inaccurate data.</li>
-        <li>
-          <strong>Erasure:</strong> Delete your account and all associated data directly from the app (Profile → Delete
+<!-- ── 9. Your Rights (GDPR) ── -->
+<h2>9. Your Rights</h2>
+<p>If you are in the European Economic Area (EEA), you have the following rights:</p>
+<ul>
+<li><strong>Access:</strong> Request a copy of your data.</li>
+<li><strong>Rectification:</strong> Correct inaccurate data.</li>
+<li>
+<strong>Erasure:</strong> Delete your account and all associated data directly from the app (Profile → Delete
           Account → Delete my account and data). This also removes your RevenueCat customer record.
         </li>
-        <li>
-          <strong>Portability:</strong> Export your transaction data as CSV from the app (Profile → Data → Export).
+<li>
+<strong>Portability:</strong> Export your transaction data as CSV from the app (Profile → Data → Export).
         </li>
-        <li><strong>Objection:</strong> Opt out of personalised advertising via your device settings.</li>
-      </ul>
-
-      <!-- ── 10. Security ── -->
-      <h2>10. Security</h2>
-      <p>
+<li><strong>Objection:</strong> Opt out of personalised advertising via your device settings.</li>
+</ul>
+<!-- ── 10. Security ── -->
+<h2>10. Security</h2>
+<p>
         We use Firebase's built-in security rules to ensure each user can only access their own data. All data is
         transmitted over HTTPS. Passwords are managed by Firebase Authentication and are never stored by us.
       </p>
-
-      <!-- ── 11. Children ── -->
-      <h2>11. Children's Privacy</h2>
-      <p>
+<!-- ── 11. Children ── -->
+<h2>11. Children's Privacy</h2>
+<p>
         Balancly is not directed at children under the age of 13. We do not knowingly collect personal data from
         children. If you believe a child has provided us with personal data, please contact us and we will delete it
         promptly.
       </p>
-
-      <!-- ── 12. Changes ── -->
-      <h2>12. Changes to This Policy</h2>
-      <p>
+<!-- ── 12. Changes ── -->
+<h2>12. Changes to This Policy</h2>
+<p>
         We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated"
         date above. Continued use of the app after changes constitutes acceptance of the updated policy.
       </p>
+<!-- ── 13. Contact ── -->
+<h2>13. Contact</h2>
+<p>
+        If you have any questions or requests regarding this Privacy Policy, please contact us at:<br/>
+<a href="mailto:balancly.support@gmail.com">balancly.support@gmail.com</a>
+</p>
 
-      <!-- ── 13. Contact ── -->
-      <h2>13. Contact</h2>
-      <p>
-        If you have any questions or requests regarding this Privacy Policy, please contact us at:<br />
-        <a href="mailto:balancly.support@gmail.com">balancly.support@gmail.com</a>
-      </p>
-    </div>
-  </body>
+  </div>
+
+  <!-- HUNGARIAN -->
+  <div id="content-hu" class="lang-content">
+    <h1>Adatvédelmi irányelvek</h1>
+    <p class="subtitle">Balancly – Finance Manager &nbsp;·&nbsp; Utoljára frissítve: 2026. április</p>
+
+    <p>Ez az Adatvédelmi irányelv elmagyarázza, hogy a Balancly hogyan gyűjti, használja és védi az adatokat, amikor a mobilalkalmazásunkat használod. Az alkalmazás használatával elfogadod az ebben az irányelvben leírt gyakorlatokat.</p>
+
+    <h2>1. Gyűjtött adatok</h2>
+    <p>Kizárólag az alkalmazás funkcióihoz szükséges minimális adatokat gyűjtjük:</p>
+    <ul>
+      <li><strong>Fiókadatok:</strong> E-mail-címed, amelyet a fiók létrehozásához és azonosításához használunk a Firebase Authentication segítségével.</li>
+      <li><strong>Pénzügyi adatok:</strong> Az általad manuálisan rögzített kiadások, bevételek, kategóriák, kategória limitek és ismétlődő kiadások.</li>
+      <li><strong>Beállítások:</strong> Kiválasztott nyelv, pénznem, dátumformátum, avatár és értesítési beállítások — helyben és a felhőben tárolva.</li>
+      <li><strong>Előfizetési adatok:</strong> Vásárlási előzmények, előfizetési státusz és jogosultságok — a RevenueCat kezeli.</li>
+      <li><strong>Eszközazonosítók:</strong> Névtelen eszközazonosító, amelyet a Google AdMob használ hirdetési személyre szabáshoz (csak az ingyenes szinten).</li>
+    </ul>
+    <p>Nem gyűjtünk bankadatokat, fizetési kártyaszámokat vagy pénzügyi számlahitelesítő adatokat.</p>
+
+    <h2>2. Az adatok felhasználása</h2>
+    <ul>
+      <li>Pénzügyi adataid szinkronizálásához és biztosításához eszközök között.</li>
+      <li>Prémium előfizetésed kezeléséhez és a prémium funkciók feloldásához.</li>
+      <li>Releváns hirdetések megjelenítéséhez az ingyenes felhasználóknak a Google AdMob segítségével.</li>
+      <li>Opcionális helyi értesítések küldéséhez (napi emlékeztető, havi összefoglaló).</li>
+    </ul>
+
+    <h2>3. Firebase — Hitelesítés és felhőtárolás</h2>
+    <p>A Balancly a <strong>Firebase</strong> (Google) szolgáltatást használja a felhasználói hitelesítéshez és adattároláshoz. Fiókadataid és tranzakcióid biztonságosan tárolódnak a Firebase Firestore-ban.</p>
+    <ul>
+      <li>A Firebase Auth kezeli az e-mail/jelszó alapú bejelentkezést.</li>
+      <li>A Firestore tárolja a tranzakciókat, kategóriákat, limiteket és beállításokat.</li>
+      <li>Az adatok a Google biztonságos felhőinfrastruktúrájában vannak tárolva.</li>
+    </ul>
+    <p>Firebase adatvédelmi irányelv: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
+
+    <h2>4. RevenueCat — Előfizetés-kezelés</h2>
+    <p>A Balancly a <strong>RevenueCat</strong> szolgáltatást használja az alkalmazáson belüli előfizetések kezeléséhez és a vásárlások érvényesítéséhez. Feliratkozáskor a RevenueCat a következőket dolgozza fel és tárolja:</p>
+    <ul>
+      <li>Névtelen felhasználói azonosító (személyes adatok nélkül).</li>
+      <li>Vásárlási nyugták és előfizetési státusz a Google Playtől.</li>
+      <li>Jogosultsági státusz (aktív-e a prémium előfizetésed).</li>
+      <li>Előfizetés lejárati dátumai és megújítási előzmények.</li>
+    </ul>
+    <p>A RevenueCat nem kapja meg a fizetési kártya adataidat — ezek a Google Playnél maradnak. A RevenueCat kizárólag anonimizált vásárlási tokeneket kap az áruháztól.</p>
+    <p>RevenueCat adatvédelmi irányelv: <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></p>
+
+    <h2>5. Google AdMob — Hirdetések</h2>
+    <p>Az ingyenes felhasználók közbülső hirdetéseket láthatnak, amelyeket a <strong>Google AdMob</strong> szolgáltat. Az AdMob a következőket gyűjtheti és használhatja:</p>
+    <ul>
+      <li>Reklám-azonosítók (Google Advertising ID Androidon).</li>
+      <li>Eszközinformációk (modell, operációs rendszer verziója, nyelv, időzóna).</li>
+      <li>Alkalmazáshasználati adatok a hirdetések gyakoriságához és relevanciájához.</li>
+      <li>Hozzávetőleges helyzet (ország/régió szintű) az IP-cím alapján — <strong>nem</strong> GPS vagy pontos helymeghatározás. Nem kérünk helymeghatározási engedélyeket.</li>
+    </ul>
+    <p>A prémium előfizetők nem látnak hirdetéseket. A személyre szabott hirdetésekből kiiratkozhatsz az eszköz beállításaiban az <em>Adatvédelem → Hirdetések</em> menüpontban.</p>
+    <p>Google AdMob adatvédelmi irányelv: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+
+    <h2>6. Adatexportálás és -importálás</h2>
+    <p>A Balancly lehetővé teszi a tranzakciós adatok <strong>CSV-fájlként való exportálását</strong> a rendszer megosztási lapján keresztül. Az exportált fájlok az eszközödön helyben jönnek létre. Mi nem töltjük fel és nem tároljuk az exportált fájlokat egyetlen szerveren sem.</p>
+    <p>Lehetőséged van <strong>CSV-fájlok importálására</strong> is tömeges tranzakcióhozzáadáshoz. Az importált adatokat helyben ellenőrizzük, majd a Firestore-fiókodba írjuk. Az importált fájlokat a feldolgozás után nem tároljuk.</p>
+
+    <h2>7. Helyi értesítések</h2>
+    <p>A Balancly opcionálisan helyi értesítéseket küldhet: napi kiadási emlékeztetőt és havi összefoglaló értesítést. Ezeket az eszközödön helyben ütemezzük, és nem érintenek semmilyen külső szervert. Az értesítések tartalma nem kerül továbbításra hozzánk.</p>
+
+    <h2>8. Adatmegőrzés</h2>
+    <p>Adataidat addig őrizzük meg, amíg a fiókod fennáll. A fiók törlésekor az összes Firestore-adat (tranzakciók, kategóriák, beállítások) véglegesen törlődik. A RevenueCat ügyféladatok is törlődnek a fiók törlésekor, a GDPR törlési kérelmeknek megfelelően. A biztonsági másolatok legfeljebb 30 napig maradhatnak meg a Firebase infrastruktúrájában.</p>
+
+    <h2>9. Jogaid</h2>
+    <p>Ha az Európai Gazdasági Térségben (EGT) tartózkodsz, a következő jogok illetnek meg:</p>
+    <ul>
+      <li><strong>Hozzáférés:</strong> Másolatot kérhetsz az adataidról.</li>
+      <li><strong>Helyesbítés:</strong> Pontatlan adatok javítása.</li>
+      <li><strong>Törlés:</strong> Fiókodat és összes kapcsolódó adatodat törölheted közvetlenül az alkalmazásból (Profil → Fiók törlése → Fiók és adatok törlése). Ez a RevenueCat ügyfélrekordjának törlésével is jár.</li>
+      <li><strong>Hordozhatóság:</strong> Exportálhatod tranzakcióadataidat CSV-ként az alkalmazásból (Profil → Adatok → Exportálás).</li>
+      <li><strong>Tiltakozás:</strong> Kiiratkozhatsz a személyre szabott hirdetésekből az eszköz beállításaiban.</li>
+    </ul>
+
+    <h2>10. Biztonság</h2>
+    <p>A Firebase beépített biztonsági szabályait használjuk annak érdekében, hogy minden felhasználó csak a saját adataihoz férhessen hozzá. Minden adat HTTPS-en keresztül kerül továbbításra. A jelszavakat a Firebase Authentication kezeli, és mi soha nem tároljuk azokat.</p>
+
+    <h2>11. Gyermekek adatvédelme</h2>
+    <p>A Balancly nem irányul 13 év alatti gyermekeknek. Tudatosan nem gyűjtünk személyes adatokat gyermekektől. Ha úgy véled, hogy egy gyermek személyes adatokat adott meg nekünk, kérjük, lépj velünk kapcsolatba, és haladéktalanul töröljük azokat.</p>
+
+    <h2>12. Az irányelv módosítása</h2>
+    <p>Időről időre frissíthetjük ezt az Adatvédelmi irányelvet. A változásokat a fenti „Utoljára frissítve" dátum módosítása jelzi. Az alkalmazás változások utáni folyamatos használata az frissített irányelv elfogadását jelenti.</p>
+
+    <h2>13. Kapcsolat</h2>
+    <p>Ha kérdésed vagy kérelmed van az Adatvédelmi irányelvekkel kapcsolatban, kérjük, lépj velünk kapcsolatba:<br />
+    <a href="mailto:balancly.support@gmail.com">balancly.support@gmail.com</a></p>
+  </div>
+
+</div>
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('active');
+    document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+  }
+  const browserLang = navigator.language || navigator.userLanguage;
+  if (browserLang && browserLang.toLowerCase().startsWith('hu')) switchLang('hu');
+</script>
+</body>
 </html>
